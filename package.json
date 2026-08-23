@@ -5,8 +5,7 @@
   "description": "VEX GO 教學團隊的教案、觀議課與師培工作台",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check server.js && node --check app.js && node --check scripts/reset-admin.js",
-    "admin:reset": "node scripts/reset-admin.js"
+    "check": "node --check server.js && node --check app.js"
   },
   "engines": {
     "node": ">=20"
