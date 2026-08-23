@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="拾光教學團隊的 VEX GO 教案、共備與師培工作台" />
+    <title>拾光教學｜團隊工作台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-locked">
+    <section class="auth-screen" id="authScreen">
+      <div class="auth-visual">
+        <div class="brand auth-brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>拾光教學</strong><small>ONE TEAM · ONE PRACTICE</small></div></div>
+        <div class="auth-message"><span class="auth-kicker">VEX GO 教學共創平台</span><h1>讓每一次教學，<br />都成為團隊的養分。</h1><p>從共備、試教到觀議課，把好方法留下來，陪伴每一位老師成為更好的教學者。</p></div>
+        <div class="auth-quote">「不是一個人把課上好，<br />　而是一群人一起把教學變好。」</div>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-box">
+          <p class="eyebrow">WELCOME BACK</p><h2 id="authTitle">登入團隊工作台</h2><p class="auth-subtitle" id="authSubtitle">使用你的團隊帳號繼續</p>
+          <div class="auth-tabs"><button class="active" type="button" data-auth-tab="login">登入</button><button type="button" data-auth-tab="register">信箱註冊</button></div>
+          <form id="authForm">
+            <label class="register-field" hidden>姓名<input name="name" autocomplete="name" placeholder="你的姓名" /></label>
+            <label>帳號或信箱<input name="email" autocomplete="username" required placeholder="admin 或 name@example.com" /></label>
+            <label>密碼<input name="password" type="password" autocomplete="current-password" required placeholder="輸入密碼" /></label>
+            <p class="form-error" id="authError" role="alert"></p>
+            <button class="primary-button auth-submit" type="submit">登入工作台　→</button>
+          </form>
+          <div class="admin-hint"><span>✦</span><p><strong>管理員：彭彭</strong><br />帳號 admin　·　預設密碼 0000</p></div>
+        </div>
+      </div>
+    </section>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div><strong>拾光教學</strong><small>VEX GO 教學團隊</small></div>
+        </div>
+
+        <nav class="nav" aria-label="主要導覽">
+          <p class="nav-label">工作空間</p>
+          <a class="nav-item active" href="#dashboard" data-page="dashboard"><span class="icon">⌂</span>總覽</a>
+          <a class="nav-item" href="#lessons" data-page="lessons"><span class="icon">▤</span>教案資料庫<span class="count">24</span></a>
+          <a class="nav-item" href="#meetings" data-page="meetings"><span class="icon">◷</span>共備會議</a>
+          <a class="nav-item" href="#observations" data-page="observations"><span class="icon">▣</span>觀議課紀錄</a>
+          <a class="nav-item" href="#curriculum" data-page="curriculum"><span class="icon">◎</span>學力指標<span class="badge-new">MOE</span></a>
+          <p class="nav-label">成長中心</p>
+          <a class="nav-item" href="#training" data-page="training"><span class="icon">◇</span>師培學院<span class="badge-new">NEW</span></a>
+          <a class="nav-item" href="#team" data-page="team"><span class="icon">♙</span>團隊成長</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <div class="card-icon">✦</div>
+          <strong>一起讓教學更好</strong>
+          <p>本月已累積 18 小時的共備與觀課。</p>
+          <div class="mini-progress"><span></span></div>
+          <small>團隊目標 72%</small>
+        </div>
+
+        <button class="profile" id="profileButton" aria-label="開啟個人選單">
+          <span class="avatar coral" id="userInitial">彭</span><span class="profile-name"><strong id="userName">彭彭</strong><small id="userRole">網站管理員</small></span><span>⋯</span>
+        </button>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="menu-button" id="menuButton" aria-label="切換選單">☰</button>
+          <div class="search"><span>⌕</span><input id="globalSearch" type="search" placeholder="搜尋教案、會議或夥伴…" /><kbd>⌘ K</kbd></div>
+          <div class="top-actions">
+            <button class="icon-button" id="notificationButton" aria-label="通知">♢<span class="notification-dot"></span></button>
+            <button class="primary-button" id="createButton"><span>＋</span>新增內容</button>
+          </div>
+        </header>
+
+        <div class="content" id="dashboard">
+          <section class="welcome">
+            <div>
+              <p class="eyebrow">FRIDAY, 21 AUGUST</p>
+              <h1>早安，<span id="welcomeName">夥伴</span> <span>👋</span></h1>
+              <p>今天也一起，把每一次教學變成團隊共同的養分。</p>
+            </div>
+            <div class="week-streak"><div class="streak-icon">↗</div><div><small>連續共備</small><strong>6 週</strong></div><span>最佳紀錄！</span></div>
+          </section>
+
+          <section class="stats-grid" aria-label="本月統計">
+            <article class="stat-card peach"><div class="stat-icon">▤</div><div><small>正式教案</small><strong>24</strong><span class="trend">↑ 3 <em>本月</em></span></div></article>
+            <article class="stat-card mint"><div class="stat-icon">◉</div><div><small>觀議課紀錄</small><strong>12</strong><span class="trend">↑ 2 <em>本月</em></span></div></article>
+            <article class="stat-card lavender"><div class="stat-icon">♙</div><div><small>培訓中夥伴</small><strong>8</strong><span class="trend">2 <em>即將完訓</em></span></div></article>
+            <article class="stat-card yellow"><div class="stat-icon">✦</div><div><small>共備時數</small><strong>36<sup>h</sup></strong><span class="trend">↑ 8h <em>本月</em></span></div></article>
+          </section>
+
+          <section class="dashboard-grid">
+            <article class="panel next-class">
+              <div class="panel-head"><div><p class="eyebrow">NEXT UP</p><h2>下一堂課</h2></div><button class="more-button">•••</button></div>
+              <div class="class-content">
+                <div class="date-block"><strong>24</strong><span>AUG</span></div>
+                <div class="class-info"><div class="tag-row"><span class="pill blue">VEX GO</span><span class="pill pale">初階・第 4 單元</span></div><h3>超級機器車：認識齒輪與動力</h3><p><span>◷</span> 週一 14:00–15:30　 <span>⌖</span> 小樹教室</p><div class="teacher-row"><span class="avatar small green">哲</span><span><small>授課教師</small><strong>陳哲宇</strong></span><button class="outline-button" data-action="lesson">查看教案　→</button></div></div>
+              </div>
+              <div class="prep"><span>✓</span><div><strong>課前準備完成度</strong><div class="progress"><i></i></div></div><b>75%</b></div>
+            </article>
+
+            <article class="panel activity-panel">
+              <div class="panel-head"><h2>團隊動態</h2><button class="text-button">查看全部</button></div>
+              <div class="activity-list">
+                <div class="activity"><span class="avatar blue-avatar">敏</span><div><p><strong>張敏</strong> 更新了教案</p><a href="#">〈橋樑大挑戰〉課堂引導</a><small>12 分鐘前</small></div><span class="activity-icon blue-bg">▤</span></div>
+                <div class="activity"><span class="avatar yellow-avatar">哲</span><div><p><strong>陳哲宇</strong> 上傳了觀課影像</p><a href="#">初階班第 3 堂｜精華片段</a><small>1 小時前</small></div><span class="activity-icon yellow-bg">▶</span></div>
+                <div class="activity"><span class="avatar pink-avatar">雅</span><div><p><strong>王雅婷</strong> 完成培訓單元</p><a href="#">提問的藝術：讓孩子多想一步</a><small>昨天 16:42</small></div><span class="activity-icon pink-bg">✓</span></div>
+              </div>
+            </article>
+
+            <article class="panel journey-panel">
+              <div class="panel-head"><div><p class="eyebrow">TEACHER JOURNEY</p><h2>培訓旅程</h2></div><button class="text-button">進入師培學院　→</button></div>
+              <div class="journey-content"><div class="journey-copy"><span class="pill lavender-pill">第二階段</span><h3>從帶課老師，成為引導學習的設計者</h3><p>完成課堂提問與觀察練習，你正在建立屬於自己的教學判斷。</p><div class="journey-progress"><div><span>本階段進度</span><b>6 / 8 單元</b></div><div class="progress purple"><i></i></div></div></div><div class="journey-art" aria-hidden="true"><div class="sun"></div><div class="hill back"></div><div class="hill front"></div><div class="flag">⚑</div><div class="person">●<br>╱│╲<br>╱ ╲</div></div></div>
+              <div class="journey-footer"><div class="next-module"><span class="play">▶</span><div><small>下一個單元</small><strong>如何給予有效的學習回饋</strong></div></div><button class="primary-button small-button" data-action="continue">繼續學習</button></div>
+            </article>
+
+            <article class="panel schedule-panel">
+              <div class="panel-head"><h2>本週行程</h2><button class="text-button">查看日曆</button></div>
+              <div class="schedule-row"><div class="schedule-date"><strong>21</strong><small>今天</small></div><i class="line orange"></i><div><span class="pill orange-pill">共備會議</span><h4>初階課程優化討論</h4><p>16:00–17:30 · 線上會議</p></div></div>
+              <div class="schedule-row"><div class="schedule-date"><strong>23</strong><small>週日</small></div><i class="line purple-line"></i><div><span class="pill lavender-pill">觀議課</span><h4>雅婷｜獨立帶課觀察</h4><p>10:00–11:30 · 大安教室</p></div></div>
+            </article>
+          </section>
+        </div>
+
+        <div class="page-placeholder" id="placeholder" hidden></div>
+      </main>
+    </div>
+
+    <dialog id="createDialog">
+      <form method="dialog">
+        <button class="dialog-close" value="cancel" aria-label="關閉">×</button>
+        <p class="eyebrow">CREATE NEW</p><h2>想新增什麼內容？</h2><p>選擇一個類型，讓團隊知識持續累積。</p>
+        <div class="create-options"><button value="lesson"><span class="option-icon peach">▤</span><strong>教案</strong><small>建立或匯入課程教案</small></button><button value="meeting"><span class="option-icon mint">◷</span><strong>會議紀錄</strong><small>開始一場共備會議</small></button><button value="observation"><span class="option-icon lavender">▶</span><strong>觀議課</strong><small>上傳影像與回饋</small></button></div>
+      </form>
+    </dialog>
+    <dialog id="editorDialog" class="editor-dialog"><form method="dialog" id="editorForm"><button class="dialog-close" value="cancel" aria-label="關閉">×</button><div id="editorContent"></div></form></dialog>
+    <div class="toast" id="toast" role="status">已開啟教案</div>
+    <script src="app.js"></script>
+  </body>
+</html>
