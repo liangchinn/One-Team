@@ -11,27 +11,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section class="auth-screen" id="authScreen">
-      <div class="auth-visual">
-        <div class="brand auth-brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>拾光教學</strong><small>ONE TEAM · ONE PRACTICE</small></div></div>
-        <div class="auth-message"><span class="auth-kicker">VEX GO 教學共創平台</span><h1>讓每一次教學，<br />都成為團隊的養分。</h1><p>從共備、試教到觀議課，把好方法留下來，陪伴每一位老師成為更好的教學者。</p></div>
-        <div class="auth-quote">「不是一個人把課上好，<br />　而是一群人一起把教學變好。」</div>
-      </div>
-      <div class="auth-panel">
-        <div class="auth-box">
-          <p class="eyebrow">WELCOME BACK</p><h2 id="authTitle">登入團隊工作台</h2><p class="auth-subtitle" id="authSubtitle">使用你的團隊帳號繼續</p>
-          <div class="auth-tabs"><button class="active" type="button" data-auth-tab="login">登入</button><button type="button" data-auth-tab="register">信箱註冊</button></div>
-          <form id="authForm">
-            <label class="register-field" hidden>姓名<input name="name" autocomplete="name" placeholder="你的姓名" /></label>
-            <label>帳號或信箱<input name="email" autocomplete="username" required placeholder="admin 或 name@example.com" /></label>
-            <label>密碼<input name="password" type="password" autocomplete="current-password" required placeholder="輸入密碼" /></label>
-            <p class="form-error" id="authError" role="alert"></p>
-            <button class="primary-button auth-submit" type="submit">登入工作台　→</button>
-          </form>
-          <div class="admin-hint"><span>✦</span><p><strong>管理員快速登入</strong><br />帳號 admin　·　預設密碼 0000</p></div>
-        </div>
-      </div>
-    </section>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
@@ -45,7 +24,6 @@
           <a class="nav-item" href="#lessons" data-page="lessons"><span class="icon">▤</span>教案資料庫<span class="count">24</span></a>
           <a class="nav-item" href="#meetings" data-page="meetings"><span class="icon">◷</span>共備會議</a>
           <a class="nav-item" href="#observations" data-page="observations"><span class="icon">▣</span>觀議課紀錄</a>
-          <a class="nav-item" href="#curriculum" data-page="curriculum"><span class="icon">◎</span>學力指標<span class="badge-new">MOE</span></a>
           <p class="nav-label">成長中心</p>
           <a class="nav-item" href="#training" data-page="training"><span class="icon">◇</span>師培學院<span class="badge-new">NEW</span></a>
           <a class="nav-item" href="#team" data-page="team"><span class="icon">♙</span>團隊成長</a>
@@ -60,7 +38,7 @@
         </div>
 
         <button class="profile" id="profileButton" aria-label="開啟個人選單">
-          <span class="avatar coral" id="userInitial">彭</span><span class="profile-name"><strong id="userName">彭彭</strong><small id="userRole">網站管理員</small></span><span>⋯</span>
+          <span class="avatar coral">宥</span><span class="profile-name"><strong>林宥安</strong><small>教學總監</small></span><span>⋯</span>
         </button>
       </aside>
 
@@ -78,7 +56,7 @@
           <section class="welcome">
             <div>
               <p class="eyebrow">FRIDAY, 21 AUGUST</p>
-              <h1>早安，<span id="welcomeName">夥伴</span> <span>👋</span></h1>
+              <h1>早安，宥安 <span>👋</span></h1>
               <p>今天也一起，把每一次教學變成團隊共同的養分。</p>
             </div>
             <div class="week-streak"><div class="streak-icon">↗</div><div><small>連續共備</small><strong>6 週</strong></div><span>最佳紀錄！</span></div>
@@ -135,7 +113,6 @@
         <div class="create-options"><button value="lesson"><span class="option-icon peach">▤</span><strong>教案</strong><small>建立或匯入課程教案</small></button><button value="meeting"><span class="option-icon mint">◷</span><strong>會議紀錄</strong><small>開始一場共備會議</small></button><button value="observation"><span class="option-icon lavender">▶</span><strong>觀議課</strong><small>上傳影像與回饋</small></button></div>
       </form>
     </dialog>
-    <dialog id="editorDialog" class="editor-dialog"><form method="dialog" id="editorForm"><button class="dialog-close" value="cancel" aria-label="關閉">×</button><div id="editorContent"></div></form></dialog>
     <div class="toast" id="toast" role="status">已開啟教案</div>
     <script src="app.js"></script>
   </body>
