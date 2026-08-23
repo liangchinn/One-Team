@@ -28,15 +28,7 @@ const curriculum = [
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) { return { salt, hash: crypto.pbkdf2Sync(password, salt, 120000, 32, 'sha256').toString('hex') }; }
 function initDb() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DB_FILE)) {
-    fs.writeFileSync(DB_FILE, JSON.stringify({ users: [], lessons: [], observations: [], curriculumCheckedAt: new Date().toISOString() }, null, 2));
-  }
-
-  const data = db();
-  if (!data.users.some((user) => user.email.toLowerCase() === 'admin')) {
-    data.users.push({ id: 'admin', email: 'admin', name: '彭彭', role: 'admin', ...hashPassword('0000') });
-    save(data);
-  }
+  if (!fs.existsSync(DB_FILE)) { const adminPassword = hashPassword('0000'); fs.writeFileSync(DB_FILE, JSON.stringify({ users: [{ id: 'admin', email: 'admin', name: '彭彭', role: 'admin', ...adminPassword }], lessons: [], observations: [], curriculumCheckedAt: new Date().toISOString() }, null, 2)); }
 }
 function db() { return JSON.parse(fs.readFileSync(DB_FILE, 'utf8')); }
 function save(data) { fs.writeFileSync(`${DB_FILE}.tmp`, JSON.stringify(data, null, 2)); fs.renameSync(`${DB_FILE}.tmp`, DB_FILE); }
