@@ -5,6 +5,7 @@
 ## 本機預覽
 
 ```bash
+node server.js
 python3 -m http.server 4173
 ```
 
